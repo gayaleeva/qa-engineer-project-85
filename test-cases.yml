@@ -1,0 +1,44 @@
+---
+- summary: |
+    Краткое описание тест-кейса
+  requirement: |
+    Тестируемое требование
+  prerequisites:
+    Это условия, которые необходимы для проведения тест-кейса. Они должны быть выполнены еще до запуска тест-кейса.
+    Например: открыта страница логина
+  test-data: |
+    Тестовые данные
+    Логин = ilona Пароль = password
+  steps:
+    - 
+    - 
+  expected-result: |
+    Ожидаемый результат
+
+- summary: |
+    .
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    .
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
