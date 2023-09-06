@@ -92,60 +92,73 @@
     Открылась выбранная игра в режиме зрителя
 
 - summary: |
-    7
+    Проверка возможности посмотреть статистику других игроков
   requirement: |
-    .
+    Пользователь должен иметь возможность посмотреть статистику других игроков
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать на никнейм любого пользователя в лобби или таблице лидеров
   expected-result: |
-    .
+    Открылся профиль выбранного пользователя со статистикой его игр
 
 - summary: |
-    8
+    Проверка возможности создания игры с другом
   requirement: |
-    .
+    Пользователь должен иметь возможность создать игру с другом
   prerequisites:
-    .
+    Пользователь "test_user" авторизован в одном браузере, пользователь "test_user2" авторизован во втором браузере
   test-data: |
-    .
+    Пользователь test_user: 
+    Email: test_user@mail.com
+    Password: test_password
+    Пользователь test_user2: 
+    Email: test_user2@mail.com
+    Password: test_password2
   steps:
-    - 
-    - 
+    - В первом браузере нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a friend"
+    - В поле "Choose opponent" ввести никнейм "test_user2"
+    - Нажать кнопку "Create invite"
+    - Во втором браузере в лобби нажать на иконку скрещенных мечей
+    - В выпавшем окне нажать кнопку "Accept"
   expected-result: |
-    .
+    Игра с выбранным другом успешно началась
 
 - summary: |
-    9
+    Проверка проигрыша в случае использования опции "Сдаться"
   requirement: |
-    .
+    Игра завершается проигрышем, если выбрать опцию "Сдаться"
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+    - Нажать на иконку в виде красного флажка "Give Up"
+    - Подтвердить принятие поражения, нажав "Give Up"
   expected-result: |
-    .
+    Появляется окно, сообщающее о проигрыше, игра завершается победой соперника
 
 - summary: |
-    10
+    Проверка возможности посмотреть историю игр
   requirement: |
-    .
+    Пользователь должен иметь возможность посмотреть историю завершенных игр
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку на "Completed games" 
   expected-result: |
-    .
+    Откроется вкладка с историей последних прошедших игр
 
 - summary: |
     11
