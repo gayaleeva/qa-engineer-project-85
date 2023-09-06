@@ -1,22 +1,112 @@
 ---
 - summary: |
-    Краткое описание тест-кейса
+    Успешная регистрация пользователя
   requirement: |
-    Тестируемое требование
+    Пользователь должен иметь возможность зарегистрироваться на сайте
   prerequisites:
-    Это условия, которые необходимы для проведения тест-кейса. Они должны быть выполнены еще до запуска тест-кейса.
-    Например: открыта страница логина
+    Открыта страница регистрации https://codebattle.hexlet.io/users/new?locale=en&next=%2F
   test-data: |
-    Тестовые данные
-    Логин = ilona Пароль = password
+    Nickname: test_user
+    Email: test_user@mail.com
+    Password: test_password
+  steps:
+    - Ввести никнейм в поле Nickname
+    - Ввести email в поле Email
+    - Ввести пароль в поле Password
+    - Ввести пароль в поле Password Confirmation
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Пользователь успешно зарегистрирован
+
+- summary: |
+    Невозможность авторизации с несуществующими Email 
+  requirement: |
+    При авторизации с несуществующим Email пользователь не проходит авторизацию
+  prerequisites:
+    Открыта страница авторизации https://codebattle.hexlet.io/session/new?locale=en&next=%2F
+  test-data: |
+    Email: test_user@mail.cot
+    Password: test_password
+  steps:
+    - Ввести email
+    - Ввести пароль
+    - Нажать кнопку "Submit"
+  expected-result: |
+    Пользователь не прошёл авторизацию, над полем Email появится сообщение об ошибке "EMAIL_NOT_FOUND"
+    
+- summary: |
+    Возможность принять участие в игре без регистрации
+  requirement: |
+    Неавторизованный пользователь должен иметь возможность принять участвовать в тестовой игре с ботом
+  prerequisites:
+    Открыта главная страница https://codebattle.hexlet.io/
+  test-data: |
+    Нет данных
+  steps:
+    - Нажимаем на кнопку "TRY SIMPLE BATTLE" 
+  expected-result: |
+    Игра началась
+
+- summary: |
+    Проверка возможности создать игру с соперником-ботом
+  requirement: |
+    Пользователь должен иметь возможность создать игру с соперником-ботом
+  prerequisites:
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Email: test_user@mail.com
+    Password: test_password
+  steps:
+    - Нажать кнопку "Create a game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+  expected-result: |
+    Началась игра с соперником-ботом
+
+- summary: |
+    Проверка возможности присоединиться к созданной другим участником игре
+  requirement: |
+    Пользователь должен иметь возможность присоединиться к созданной другим участником игре
+  prerequisites:
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Email: test_user@mail.com
+    Password: test_password
+  steps:
+    - Выбрать в списке игр в лобби игру со статусом "waiting_opponent" и нажать кнопку "Fight"
+  expected-result: |
+    Началась игра с выбранным соперником
+
+- summary: |
+    Проверка возможности зайти в запущенную игру в качестве зрителя
+  requirement: |
+    Пользователь должен иметь возможность зайти в запущенную игру в качестве зрителя
+  prerequisites:
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Email: test_user@mail.com
+    Password: test_password
+  steps:
+    - Выбрать в списке игр в лобби игру со статусом "playing" и нажать кнопку "Show"
+  expected-result: |
+    Открылась выбранная игра в режиме зрителя
+
+- summary: |
+    7
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
   steps:
     - 
     - 
   expected-result: |
-    Ожидаемый результат
+    .
 
 - summary: |
-    .
+    8
   requirement: |
     .
   prerequisites:
@@ -30,7 +120,161 @@
     .
 
 - summary: |
+    9
+  requirement: |
     .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    10
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    11
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    12
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    13
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    14
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    15
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    16
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    17
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    18
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    19
+  requirement: |
+    .
+  prerequisites:
+    .
+  test-data: |
+    .
+  steps:
+    - 
+    - 
+  expected-result: |
+    .
+
+- summary: |
+    20
   requirement: |
     .
   prerequisites:
