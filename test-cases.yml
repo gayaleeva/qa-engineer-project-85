@@ -161,46 +161,56 @@
     Откроется вкладка с историей последних прошедших игр
 
 - summary: |
-    11
+    Проверка возможности видеть код соперника в реальном времени
   requirement: |
-    .
+    Пользователь должен иметь возможность видеть код соперника в реальном времени
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+    - Начать набирать символы в поле кода
   expected-result: |
-    .
+    Видно поле кода соперника и процесс изменения его кода в реальном времени
 
 - summary: |
-    12
+    Проверка возможности выбрать язык для текста задачи в игре
   requirement: |
-    .
+    Пользователь должен иметь возможность выбрать язык для текста задачи в игре - русский или английский
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+    - В окне с текстом задачи изменить язык на RU
   expected-result: |
-    .
+    Текст задачи отображается на русском языке
 
 - summary: |
-    13
+    Проверка возможности общаться с соперником и зрителями в чате
   requirement: |
-    .
+    Пользователь должен иметь возможность общаться с соперником и зрителями в чате
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+    - Написать любое сообщение в чат
+    - Нажать кнопку "Send"
   expected-result: |
-    .
+    Сообщение отобразилось в чате
 
 - summary: |
     14
@@ -217,18 +227,21 @@
     .
 
 - summary: |
-    15
+    Проверка возможности ознакомиться с гайдом по игре во время битвы
   requirement: |
-    .
+    Пользователь должен иметь возможность ознакомиться с гайдом по игре во время битвы
   prerequisites:
-    .
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
-    .
+    Email: test_user@mail.com
+    Password: test_password
   steps:
-    - 
-    - 
+    - Нажать кнопку "Create a Game"
+    - Выбрать тип игры "With a bot", другие параметры оставить по умолчанию
+    - Нажать кнопку "Create battle"
+    - Нажать кнопку "Show guide"
   expected-result: |
-    .
+    Запускается гайд из восьми шагов по функционалу битвы 
 
 - summary: |
     16
