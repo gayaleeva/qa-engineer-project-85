@@ -338,6 +338,8 @@
     Проверка возможности переподключения участника к игре
   requirement: |
     Пользователь должен иметь возможность переподключения к игре в качестве участника
+  prerequisites:
+    Открыта главная страница https://codebattle.hexlet.io/#lobby
   test-data: |
     Email: test_user@mail.com
     Password: test_password
